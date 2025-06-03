@@ -184,7 +184,7 @@ messages.addEventListener("click", async (e) => {
 
     if (confirm("Are you sure you want to delete this message?")) {
       try {
-        const res = await fetch(`https://mge-2.onrender.com/delete-message/${id}`, {
+        const res = await fetch(`https://man-l3u5.onrender.com/delete-message/${id}`, {
           method: "DELETE"
         });
         if (res.ok) {
