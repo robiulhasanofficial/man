@@ -1,0 +1,219 @@
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* === Navbar Styles === */
+.navbar {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fcd34d;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  background: linear-gradient(to right, #facc15, #f59e0b);
+  color: #111;
+}
+
+.login-btn {
+  background: linear-gradient(to right, #facc15, #f59e0b);
+  color: #111 !important;
+  font-weight: bold;
+}
+
+/* === Hamburger Toggle === */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* === Card Section === */
+.card-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fcd34d;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, #1e293b, #111827);
+  color: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin: 15px;
+  color: #fcd34d;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin: 0 15px 15px;
+  color: #cbd5e1;
+}
+
+.card a {
+  display: inline-block;
+  margin: 0 15px 20px;
+  padding: 10px 16px;
+  background: linear-gradient(to right, #facc15, #f59e0b);
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.card a:hover {
+  background: linear-gradient(to right, #f59e0b, #eab308);
+}
+/* === Search Box Styling === */
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #2d2d2d;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  padding: 6px 8px;
+  background: transparent;
+  color: white;
+  width: 140px;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  color: #facc15;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+/* Search icon support */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* Responsive: Hide search box on small screens, optional */
+
+/* === Mobile Responsive === */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 65px;
+    left: -100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: #111827;
+    transition: 0.3s ease;
+    padding: 20px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu li {
+    text-align: center;
+    margin: 12px 0;
+  }
+   .search-box {
+    display: none;
+  }
+
+  .nav-menu.active + .search-box {
+    display: flex;
+    margin: 10px auto;
+  }
+}
