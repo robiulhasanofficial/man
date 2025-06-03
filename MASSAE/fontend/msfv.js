@@ -1,4 +1,4 @@
-const socket = io("https://mge-2.onrender.com", {
+const socket = io("https://man-l3u5.onrender.com", {
   transports: ["websocket", "polling"]
 });
 
